@@ -1,0 +1,17 @@
+<ng-container *ngIf="tableData$ | async as data">
+    <table>
+        <thead>
+            <!-- <tr>
+                <th *ngFor="let column of columns">{{ column }}</th>
+            </tr> -->
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of data">
+                <td>{{ user.name }}</td>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
